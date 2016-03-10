@@ -1,0 +1,57 @@
+/**
+ * Created by yang on 2015/10/22.
+ */
+$(window).load(function(){
+    function movebubble(){
+        $(".bubble_1").animate({
+            left:'+=130',
+            top:'+=100'
+        },5000).delay(500)
+            .animate({
+                left:'-=130',top:'-=100'
+            },5000,function(){
+                setTimeout(movebubble,1000);
+            });
+        $(".line_1").animate({
+            left:'+=130',top:'+=100'
+        },5000).delay(500)
+            .animate({
+                left:'-=130',top:'-=100'
+            },5000,function(){
+                setTimeout(movebubble,1000);
+            });
+        $(".bubble_2").animate({
+            left:'-=200',top:'+=100'
+        },8000).delay(500)
+            .animate({
+                left:'+=200',top:'-=100'
+            },8000,function(){
+                setTimeout(movebubble,1000);
+            });
+        $(".bubble_3").animate({
+            left:'-=200',top:'+=160'
+        },7000).delay(500)
+            .animate({
+                left:'+=200',top:'-=160'
+            },7000,function(){
+                setTimeout(movebubble,1000);
+            });
+        $(".bubble_4").animate({
+            left:'+=200',top:'+=200'
+        },12000).delay(500)
+            .animate({
+                left:'-=200',top:'-=200'
+            },12000,function(){
+                setTimeout(movebubble,1000);
+            });
+        $(".line_2").animate({
+            left:'+=200',top:'+=200'
+        },12000).delay(500)
+            .animate({
+                left:'-=200',top:'-=200'
+            },12000,function(){
+                setTimeout(movebubble,1000);
+            });
+    };
+    movebubble();
+});
